@@ -1,0 +1,4 @@
+X-ax: N[C@H](C(O)=O)CC1=CC=C(O[C@H]2CCCCC/C=C/2)C=C1
+X-eq: N[C@H](C(O)=O)CC1=CC=C(O[C@@H]2CCCCC/C=C/2)C=C1
+Y-ax: O=C(NCSC[C@@H](C(O)=O)N)O[C@@H]1CCCCC/C=C\1
+Y-eq: O=C(NCSC[C@@H](C(O)=O)N)O[C@H]1CCCCC/C=C\1
