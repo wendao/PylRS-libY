@@ -1,8 +1,8 @@
 X-ax: N[C@H](C(O)=O)CC1=CC=C(O[C@H]2CCCCC/C=C/2)C=C1
-X-ep: N[C@H](C(O)=O)CC1=CC=C(O[C@@H]2CCCCC/C=C/2)C=C1
+X-eq: N[C@H](C(O)=O)CC1=CC=C(O[C@@H]2CCCCC/C=C/2)C=C1
 Y-ax: O=C(NCSC[C@@H](C(O)=O)N)O[C@H]1CCCCC/C=C/1
-Y-ep: O=C(NCSC[C@@H](C(O)=O)N)O[C@@H]1CCCCC/C=C/1
+Y-eq: O=C(NCSC[C@@H](C(O)=O)N)O[C@@H]1CCCCC/C=C/1
 Z-R: N[C@@H](CC1=CC=C(O[C@H](C)C2=NN=C(C)N=N2)C=C1)C(O)=O
 Z-S: N[C@@H](CC1=CC=C(O[C@@H](C)C2=NN=C(C)N=N2)C=C1)C(O)=O
 S-ax: O=C(NCOC[C@@H](C(O)=O)N)O[C@H]1CCCCC/C=C/1
-S-ep: O=C(NCOC[C@@H](C(O)=O)N)O[C@@H]1CCCCC/C=C/1
+S-eq: O=C(NCOC[C@@H](C(O)=O)N)O[C@@H]1CCCCC/C=C/1
