@@ -31,5 +31,16 @@ python /path/of/esm/variant-prediction/predict-multi.py \
     --msa-path mm-hhb.a3m
 ```
 
-## 3. Preparing input data and training set
+## 3. Preparing input data
+
+Predict:
+```python
+#TZ with R and S type
+python concat_data_for_prediction.py Z R S
+#TCOY with ax and eq type
+python concat_data_for_prediction.py X ax eq
+```
+
+## 4. Prediction
+
 
