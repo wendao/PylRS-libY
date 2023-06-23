@@ -7,3 +7,9 @@
 *.molden.input
 *property.txt
 *.cpcm
+*.dat
+4.prediction/U*/ddg/
+4.prediction/U*/dock/
+4.prediction/U*/orca/
+4.prediction/U*/rotlib/
+4.prediction/ddg*/

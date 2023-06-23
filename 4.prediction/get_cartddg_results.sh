@@ -1,4 +1,4 @@
-for i in S-ax S-eq Z-S Z-R
+for i in X-ax X-eq Y-ax Y-eq S-ax S-eq Z-S Z-R
 do
 echo ${i}
 
