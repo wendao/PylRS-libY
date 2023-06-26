@@ -163,10 +163,11 @@ print(X.shape, np.sum(y))
 
 
 # In[19]:
+with open("save_ssm_tags.pickle", 'wb') as ft:
+    pickle.dump(raw_data['id'], ft)
 
-
-with open(name+"_ssm_evo"+evo_tag+".pickle", 'wb') as f:
-    pickle.dump([X, y], f)
+with open(name+"_ssm_evo"+evo_tag+".pickle", 'wb') as fp:
+    pickle.dump([X, y], fp)
 
 
 # In[ ]:
