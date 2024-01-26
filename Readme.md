@@ -2,6 +2,10 @@
 
 ## 1. Preparing sturcture templates
 
+Relax the template pdb if you have one, follow the protocol from [Cage-Prox](https://github.com/wendao/Cage-Prox)
+
+Otherwise you can predict the structure using [ColabFold](https://github.com/sokrypton/ColabFold)
+
 ## 2. Sequence embedding
 
 Command line of ESM-1v
@@ -33,7 +37,7 @@ python /path/of/esm/variant-prediction/predict-multi.py \
 
 Command line of eUnirep
 ```bash
-cd 2.evotuning/unirep/
+#cd unirep/
 python /path/of/jax-unirep/scripts/run_jax_evotuning.py \
     outputs/PylRS_train_set.fasta.txt \
     outputs/PylRS_out_domain_val_set.fasta.txt 256
@@ -51,4 +55,4 @@ python concat_data_for_prediction.py X ax eq
 
 ## 4. Prediction
 
-
+Follow the same data preparing protocol above.
