@@ -56,3 +56,5 @@ python concat_data_for_prediction.py X ax eq
 ## 4. Prediction
 
 Follow the same data preparing protocol above.
+
+Predict and rank for each single mutation, see notbook predict-ssm.ipynb.
