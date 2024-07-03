@@ -46,7 +46,23 @@ python /path/of/jax-unirep/scripts/run_jax_evotuning.py \
 ## 3. Preparing input data
 
 Predict:
-```python
+
+Generate confs.sdf using RDKit and refine
+```bash
+python gen_rotamers.py UAA-info.csv
+cd U[X]
+  python ../refine_rotamers.py confs.sdf
+cd ..
+
+```
+
+Generate rotlib
+```bash
+./run_all_protocol.sh UA UB [...]
+```
+
+
+```bash
 #TZ with R and S type
 python concat_data_for_prediction.py Z R S
 #TCOY with ax and eq type
