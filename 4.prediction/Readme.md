@@ -14,7 +14,7 @@ run_TCO_prefix.sh
 
 3. generate rosetta params and rotlib
 ```bash
-../3.training/run_rotlib_all.sh
+../3.training/run_all_protocol.sh.sh
 ```
 
 4. fix charge with ORCA
