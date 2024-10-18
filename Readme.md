@@ -43,9 +43,7 @@ python /path/of/jax-unirep/scripts/run_jax_evotuning.py \
     outputs/PylRS_out_domain_val_set.fasta.txt 256
 ```
 
-## 3. Preparing input data
-
-Predict:
+## 3. Preparing input data (3.training)
 
 Generate confs.sdf using RDKit and refine
 ```bash
@@ -61,6 +59,11 @@ Generate rotlib
 ./run_all_protocol.sh UA UB [...]
 ```
 
+Generate charge using QM
+
+## 4. Prediction
+
+Follow the same data preparing protocol above.
 
 ```bash
 #TZ with R and S type
@@ -68,9 +71,5 @@ python concat_data_for_prediction.py Z R S
 #TCOY with ax and eq type
 python concat_data_for_prediction.py X ax eq
 ```
-
-## 4. Prediction
-
-Follow the same data preparing protocol above.
 
 Predict and rank for each single mutation, see notbook predict-ssm.ipynb.
