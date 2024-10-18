@@ -1,5 +1,9 @@
 # Machine Learning Assisted Pyrrolysyl-tRNA Synthetase (PylRS) Design
 
+This repository encompasses all the training code, model parameters, and the necessary code for inference. It provides a replicable process for predicting non-canonical amino acid TCOY on Google Colab. The provided example code allows users to attempt other non-canonical computations, but the required cartddg calculations must be completed in an environment with Rosetta installed.
+
+Note: UniRep model is fine-tuned specifically for PylRS, and the Autogluon model is designed for amino acids similar to tyrosine. For more general applications, additional experimental data and retraining are necessary.
+
 ## 1. Preparing sturcture templates
 
 Relax the template pdb if you have one, follow the protocol from [Cage-Prox](https://github.com/wendao/Cage-Prox)
