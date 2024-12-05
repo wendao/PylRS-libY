@@ -6,9 +6,9 @@ Note: UniRep model is fine-tuned specifically for PylRS, and the Autogluon model
 
 ## 1. Preparing sturcture templates
 
-Relax the template pdb if you have one, follow the protocol from [Cage-Prox](https://github.com/wendao/Cage-Prox)
+All calculations related to energy-based terms need to start from an optimized initial structure, which can be the wild-type (WT) structure or a known mutant that can recognize a similar substrate.
 
-Otherwise you can predict the structure using [ColabFold](https://github.com/sokrypton/ColabFold)
+Relax (using Rosetta) the structure pdb if you have one, follow the protocol from [Cage-Prox](https://github.com/wendao/Cage-Prox), otherwise you can predict the structure using [ColabFold](https://github.com/sokrypton/ColabFold) beforehand.
 
 ## 2. Sequence embedding
 
@@ -38,6 +38,8 @@ python /path/of/esm/variant-prediction/predict-multi.py \
     --scoring-strategy masked-marginals \
     --msa-path mm-hhb.a3m
 ```
+
+For the protein of interest, such as PylRS in this example, we use the multiple sequence alignment data obtained from DeepMSA to fine-tune the UniRep model. This only needs to be done once, but if you wish to apply this method to other proteins, you will need to fine-tune it specificlly.
 
 Command line of eUnirep
 ```bash
