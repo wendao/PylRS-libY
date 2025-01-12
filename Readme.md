@@ -2,8 +2,6 @@
 
 This repository encompasses all the training code, model parameters, and the necessary code for inference. It provides a replicable process for predicting non-canonical amino acid TCOY on Google Colab. The provided example code allows users to attempt other non-canonical computations, but the required cartddg calculations must be completed in a local cluster with Rosetta installed.
 
-Note: UniRep model is fine-tuned specifically for PylRS, and the Autogluon model is designed for non-canonical amino acids derived from tyrosine. For more general applications, additional experimental data and model training are necessary.
-
 ## 1. Preparing sturcture templates
 
 All calculations related to energy-based terms need to start from an optimized initial structure, which can be the wild-type (WT) structure or a known mutant that can recognize a similar substrate.
@@ -12,9 +10,11 @@ Relax (using Rosetta) the structure pdb if you have one, follow the protocol fro
 
 ## 2. Sequence embedding
 
+Sequence-related features include the 1v and msa-1b scores calculated using the ESM model, where the MSA data used for msa-1b is obtained from deepMSA. Using the same MSA, we fine-tuned the UniRep model with [eUniRep](https://github.com/wendao/jax-unirep), making it more suitable for the characterization of PylRS, and selected the 256D model to encode protein sequences.
 
+Note: UniRep model is fine-tuned specifically for PylRS, and the Autogluon model is designed for non-canonical amino acids derived from tyrosine. For more general applications, additional experimental data and model training are necessary.
 
-### A. Command line of ESM-1v
+### A. Command line for ESM-1v score
 
 ```bash
 python /path/of/esm/variant-prediction/predict-multi.py \
@@ -71,8 +71,15 @@ cd ..
 ```
 
 ### C. Generate charge using ORCA and update params
+As an option, [ORCA](https://www.faccts.de/orca/) can be used to calculate more accurate charge distributions. We use the [Multiwfn](http://sobereva.com/multiwfn/) for scripts generation and RESP charge calculation.
+
+```bash
+./run_QM_protocol.sh A B C D [...]
+```
 
 ### D. Rosetta docking and cartesian_ddg calculation
+
+Follow the same protocol in [Cage-Prox](https://github.com/wendao/Cage-Prox), Sec. 3 and 4.
 
 ## 4. Training
 
@@ -86,7 +93,9 @@ We have provided scripts that can process data from scratch and a notebook that 
 
 ## 5. Prediction
 
-Follow the same data preparation protocol above.
+To predict a new ncAA, follow the same data preparation protocol above.
+
+Note: For TCOY, it is difficult to accurately predict the trans ring conformation. Therefore, we aligned the TCO conformations from the PDB structure of TCOK onto the generated rotamers in both ax and ep ways, and then re-optimized them using RDKit (fix_TCO.py and fit_TCO.sh).
 
 ```bash
 #TCOY with ax and eq type
