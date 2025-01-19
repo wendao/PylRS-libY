@@ -85,7 +85,11 @@ Follow the same protocol in [Cage-Prox](https://github.com/wendao/Cage-Prox), Se
 
 After obtaining the sequence embeddings and structural energy terms from the previous steps, we concatenate these two sets of data into a single one-dimensional vector with a length of 256 + 5 + 1 + 18 = 280. Each column is normalized saved. Subsequently, we invoke Autogluon to conduct the training process. 
 
-We have provided scripts that can process data from scratch and a notebook that can reproduce the model training and the prediction for the TCOY in Colab.
+We have provided scripts that can process data from scratch and a notebook that can reproduce the model training.
+
+We also provided notebook to reproduce the prediction of TCOY in Colab. <a href="https://colab.research.google.com/github/wendao/PylRS-libY/blob/main/4.prediction/reference_data/reproduce_pylrsY_prediction.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+</a>
 
 ### A. Data preparation
 
@@ -103,3 +107,4 @@ python concat_data_for_prediction.py X ax eq
 ```
 
 Predict and rank for each single mutation, see notbook predict-ssm.ipynb.
+
