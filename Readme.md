@@ -93,7 +93,6 @@ We demonstrate in the *prepare_data_from_B1-training.ipynb* file how to concaten
 
 ### B. AutoGluon training
 
-Load the  , and train
 Load the training data(saved in 4.prediction/reference_data/train_evo256.pickle) and train with Autogluon. 
 
 The final model is saved in 4.Prediction/AutogluonModels.
