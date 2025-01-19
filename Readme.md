@@ -87,10 +87,6 @@ After obtaining the sequence embeddings and structural energy terms from the pre
 
 We have provided scripts that can process data from scratch and a notebook that can reproduce the model training.
 
-We also provided notebook to reproduce the prediction of TCOY in Colab. <a href="https://colab.research.google.com/github/wendao/PylRS-libY/blob/main/4.prediction/reference_data/reproduce_pylrsY_prediction.ipynb">
-  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
-</a>
-
 ### A. Data preparation
 
 ### B. AutoGluon
@@ -107,4 +103,8 @@ python concat_data_for_prediction.py X ax eq
 ```
 
 Predict and rank for each single mutation, see notbook predict-ssm.ipynb.
+
+We also provided notebook to reproduce the prediction of TCOY in Colab. <a href="https://colab.research.google.com/github/wendao/PylRS-libY/blob/main/4.prediction/reference_data/reproduce_pylrsY_prediction.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+</a>
 
